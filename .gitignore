@@ -1,0 +1,72 @@
+bin
+bin-int
+build
+*.exe
+*.dll
+*.lib
+*.lai
+*.la
+*.dylib
+*.so
+*.a
+*.slo
+*.o
+*.obj
+*.html
+*.js
+*.mjs
+*.wasm
+*.css
+
+# Precompiled Headers
+*.gch
+*.pch
+
+
+Makefile
+
+.vscode
+
+# Visual Studio
+_ReSharper*
+*.sdf
+*.suo
+*.dir
+*.vcxproj*
+*.sln
+.vs
+CMakeSettings.json
+Win32
+x64
+Debug
+Release
+MinSizeRel
+RelWithDebInfo
+*.opensdf
+
+# Xcode
+GLFW.build
+GLFW.xcodeproj
+
+# macOS
+.DS_Store
+
+# Ninja generator
+build.ninja
+rules.ninja
+.ninja_deps
+.ninja_log
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
+cmake_install.cmake
+cmake_uninstall.cmake
+
+# Executables
+*.exe
+*.out
+*.app
