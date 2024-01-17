@@ -6,7 +6,9 @@
 # Specification
 * At the beginning of a program, accumulator is initialized to zero.
 * Accumulator is a signed 32-bit integer.(int32_t)
-* Supports the following instructions
+* Supports the following instructions: i, d, s, r, o, c.
+* Any character that is not part of the above instruction set is ignored.
+* Newline and whitespaces are also ignored.
 ## Instructions
 | Instruction   | Effect on accumulator |
 | ------------- |:---------------------:|
@@ -18,4 +20,3 @@
 | c             | output as char(8 bit) |
 
 * Of these, `i`, `d`, `s`, and `o` are from deadfish.
-* `r` and `c` are the ones added extra to accbpl
