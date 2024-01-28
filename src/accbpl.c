@@ -62,4 +62,7 @@ void executeInstruction(char instruction) {
 	else if(instruction=='c') {
 		printf("%c", (char)accumulator);
 	}
+	else if (instruction == 'g') {
+		scanf("%d" PRId32, &accumulator);
+	}
 }
