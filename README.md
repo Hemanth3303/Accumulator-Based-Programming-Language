@@ -6,16 +6,18 @@
 # Specification
 * At the beginning of a program, accumulator is initialized to zero.
 * Accumulator is a signed 32-bit integer.(int32_t)
-* Supports the following instructions: i, d, s, r, o, c, g.
+* Supports the following instructions: i, d, s, r, o, c, g, q.
 * Any character that is not part of the above instruction set is ignored.
+* Overflow is not handled, just like Deadfish.
 * Newline and whitespaces are also ignored.
 ## Instructions
-| Instruction   | Effect on accumulator |
+| Instruction   | Effect                |
 | ------------- |:---------------------:|
+| q             | stops interpretation  |
 | i             | increment             |
 | d             | decrement             |
 | s             | square                |
-| r             | square root, rounded to int|
+| r             | square root, rounded to int (-ve acc terminates)|
 | o             | output as int(32 bit) |
 | c             | output as char(8 bit) |
 | g             | get single int(32 bit) as input and overwrite |
