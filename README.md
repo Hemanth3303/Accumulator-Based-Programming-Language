@@ -3,14 +3,14 @@
 * In fact, the any deadfish program that doesn't relay on accumulator reset(at -1 and 256) should work fine with accbpl.
 * I just added few extra instructions.
 
-# Specification
+## Specification
 * At the beginning of a program, accumulator is initialized to zero.
 * Accumulator is a signed 32-bit integer.(int32_t)
 * Supports the following instructions: i, d, s, r, o, c, g, q.
 * Any character that is not part of the above instruction set is ignored.
 * Overflow is not handled, just like Deadfish.
 * Newline and whitespaces are also ignored.
-## Instructions
+### Instructions
 | Instruction   | Effect                |
 | ------------- |:---------------------:|
 | q             | stops interpretation  |
