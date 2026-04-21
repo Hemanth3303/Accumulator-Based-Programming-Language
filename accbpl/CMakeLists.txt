@@ -25,6 +25,9 @@ target_compile_definitions(accbpl
 		ACCBPL
 )
 
+cmake_base_target_platform_definitions(accbpl ACCBPL)
+cmake_base_target_architecture_definitions(accbpl ACCBPL)
+
 # PLATFORM AND COMPILER SPECIFIC
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
@@ -36,7 +39,6 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
 			NOMINMAX
 			_CRT_SECURE_NO_WARNINGS
 			WIN32_LEAN_AND_MEAN
-			ACCBPL_PLATFORM_WINDOWS
 	)
 
 	if(MSVC)
@@ -77,13 +79,6 @@ endif()
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
 
-	target_compile_definitions(accbpl
-		PUBLIC
-
-		PRIVATE
-			ACCBPL_PLATFORM_LINUX
-	)
-
 	if (CMAKE_C_COMPILER_ID STREQUAL "GNU")
 		target_link_libraries(accbpl
 			PUBLIC
@@ -109,19 +104,9 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
 			PUBLIC
 
 			PRIVATE
+
 		)
 	endif()
-
-endif()
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-
-	target_compile_definitions(accbpl
-		PUBLIC
-
-		PRIVATE
-			ACCBPL_PLATFORM_OSX
-	)
 
 endif()
 
